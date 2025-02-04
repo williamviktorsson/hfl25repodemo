@@ -12,6 +12,7 @@ String? prompt(String prompt) {
   stdout.write(prompt);
   final input = stdin.readLineSync();
   return input;
+  // comment
 }
 
 class Vehicle {
