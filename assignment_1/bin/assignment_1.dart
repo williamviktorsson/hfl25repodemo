@@ -7,7 +7,7 @@ void main(List<String> arguments) {
     print("new vehicle: ${newVehicle.regNr}");
   }
 }
-
+/// asd
 String? prompt(String prompt) {
   stdout.write(prompt);
   final input = stdin.readLineSync();
