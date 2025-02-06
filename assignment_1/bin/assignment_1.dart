@@ -1,11 +1,13 @@
 import 'dart:io';
 
+import 'package:assignment_1/repositories/person_repository.dart';
+
 void main(List<String> arguments) {
-  final regNr = prompt('Enter registration number: ');
-  if (regNr != null) {
-    var newVehicle = Vehicle(regNr: regNr);
-    print("new vehicle: ${newVehicle.regNr}");
-  }
+  var repo = PersonRepository();
+  print(repo.getAll());
+
+  print(repo.getById("123"));
+
 }
 
 String? prompt(String prompt) {
@@ -13,10 +15,4 @@ String? prompt(String prompt) {
   final input = stdin.readLineSync();
   return input;
   // comment
-}
-
-class Vehicle {
-  final String regNr;
-
-  Vehicle({required this.regNr});
 }
